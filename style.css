@@ -1,0 +1,174 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: white;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+.alarm{
+    border: 3px solid #2E94E3;
+    border-radius: 8px;
+    width: 50%;
+    box-shadow: 0 0 30px #2E94E3;
+   
+}
+
+.datetime{
+    color: white;
+    background: #2E94E3;
+    font-family: "Segoe UI", sans-serif;
+   
+   
+    padding: 15px 10px;
+    transition: 0.5s;
+    transition-property: background,box-shadow;
+}
+
+.alarm:hover{
+   
+    box-shadow: 0 0 30px #2E94E3;
+    border-radius: 5px;
+}
+
+.date{
+    font-size: 40px;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 3px;
+}
+
+.time{
+    font-size: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.time span:not(:last-child){
+    position: relative;
+    max-width: 0 6px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.time span:last-child{
+    background: #2E94E3;
+    font-size: 40px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-top: 10px;
+    padding: 0 5px;
+    border-radius: 3px;
+}
+
+hr{
+    border: 1px solid #2E94E3;
+    margin: 20px auto;
+}
+
+.setAlarm{
+    display: flex;
+    
+    justify-content: space-around;
+    border-radius: 10px;
+   
+}
+
+.column select{
+    background: #0962a6;
+    color: #fff;
+    text-align: center;
+    padding: 8px 4px;
+   font-size: 1.2rem;
+    border: 1px solid #2E94E3;
+    border-radius: 18px;
+    width: 100px;
+}
+
+
+#btn-setAlarm, .btn-delete, #stopAlarm{
+    padding: 5px;
+    color: black;
+    font-size: 1.2rem;
+    background: linear-gradient(#2E94E3, white);
+    border: 1px solid #2E94E3;
+    border-radius: 18px;
+    width: 110px;
+}
+
+#stopAlarm{
+    visibility: hidden;
+    width: 150px;
+    margin: 0 34%;
+}
+
+.btn-delete{
+    margin-left:150px;
+    background: linear-gradient(#2E94E3, white);
+}
+
+#btn-setAlarm:hover, .btn-delete:hover, #stopAlarm:hover{
+    cursor: pointer;
+    background: linear-gradient(#2E94E3, white);
+    box-shadow: 0 0 30px #2E94E3;
+}
+
+h3{
+    color: #fff;
+    font-family: "Segoe UI", sans-serif;
+    font-size: 20px;
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 3%;
+}
+
+.alarmList{
+    color: #fff;
+    margin: 14px auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.alarmLog{
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 6px auto;
+    color: #2E94E3;
+    font-weight: 600;
+}
+
+
+@media screen and (max-width: 600px) {
+    .alarm{
+        width: 100%;
+    }
+    
+}
+@media screen and (max-width: 800px) {
+    .alarm{
+        width: 90%;
+    }
+    
+}
+@media screen and (max-width: 1000px) {
+    .alarm{
+        width: 70%;
+    }
+    
+}
